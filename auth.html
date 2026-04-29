@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BudgetMate Auth</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-page">
+  <div class="money-orbs auth-orbs" aria-hidden="true">
+    <span class="money-orb orb-1">£</span>
+    <span class="money-orb orb-2">€</span>
+    <span class="money-orb orb-3">€</span>
+    <span class="money-orb orb-4">¥</span>
+    <span class="money-orb orb-5">¥</span>
+    <span class="money-orb orb-6">£</span>
+  </div>
+  <main class="auth-shell">
+    <section class="auth-card">
+      <span class="eyebrow">BudgetMate</span>
+      <h1 class="auth-title">Welcome back</h1>
+      <p class="auth-copy">Create an account or sign in to access your personal transactions and monthly budget insights.</p>
+
+      <div class="auth-toggle">
+        <button id="show-login" class="auth-toggle-btn" type="button">Login</button>
+        <button id="show-signup" class="auth-toggle-btn" type="button">Sign up</button>
+      </div>
+
+      <form id="login-form" class="auth-form">
+        <label class="input-label" for="login-email">
+          Email
+          <input class="text-input" type="email" id="login-email" placeholder="Enter your email" required>
+        </label>
+        <label class="input-label" for="login-password">
+          Password
+          <input class="text-input" type="password" id="login-password" placeholder="Enter your password" required>
+        </label>
+        <p id="login-error" class="auth-error"></p>
+        <button class="primary-btn auth-submit" type="submit">Login</button>
+      </form>
+
+      <form id="signup-form" class="auth-form">
+        <label class="input-label" for="signup-username">
+          Username
+          <input class="text-input" type="text" id="signup-username" placeholder="Choose a username" required>
+        </label>
+        <label class="input-label" for="signup-email">
+          Email
+          <input class="text-input" type="email" id="signup-email" placeholder="Enter your email" required>
+        </label>
+        <label class="input-label" for="signup-password">
+          Password
+          <input class="text-input" type="password" id="signup-password" placeholder="Create a password" required>
+        </label>
+        <p id="signup-error" class="auth-error"></p>
+        <button class="primary-btn auth-submit" type="submit">Create account</button>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

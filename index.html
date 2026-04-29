@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BudgetMate</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="money-orbs app-orbs" aria-hidden="true">
+    <span class="money-orb orb-1">£</span>
+    <span class="money-orb orb-2">€</span>
+    <span class="money-orb orb-3">€</span>
+    <span class="money-orb orb-4">¥</span>
+    <span class="money-orb orb-5">¥</span>
+    <span class="money-orb orb-6">£</span>
+  </div>
+  <div class="app-shell">
+    <div class="app-frame">
+      <nav class="topbar">
+        <div class="brand">
+          <h1 class="brand-title">BudgetMate</h1>
+          <p class="brand-subtitle">Budget and expense tracking, kept simple.</p>
+        </div>
+        <div class="nav-links">
+          <a class="nav-link" href="#home" data-page="home">Home</a>
+          <a class="nav-link" href="#transactions" data-page="transactions">Transactions</a>
+          <a class="nav-link" href="#goals" data-page="goals">Goals</a>
+          <a class="nav-link" href="#monthly" data-page="monthly">Monthly</a>
+          <span id="current-username" class="user-pill"></span>
+          <button id="logout-btn" class="logout-btn" type="button">Log out</button>
+        </div>
+      </nav>
+
+      <section id="home" class="page">
+        <div class="home-topbar">
+          <div class="home-filters">
+            <button class="home-filter-btn filter-btn" type="button" data-range="weekly">This week</button>
+            <button class="home-filter-btn filter-btn" type="button" data-range="monthly">This month</button>
+            <button class="home-filter-btn filter-btn" type="button" data-range="alltime">All time</button>
+          </div>
+          <div id="home-goals-preview" class="home-goal-strip"></div>
+        </div>
+
+        <div class="hero">
+          <article class="hero-card">
+            <span class="eyebrow">BudgetMate Dashboard</span>
+            <h2 class="hero-title">Track every pound with clarity.</h2>
+            <p class="hero-copy">Stay on top of income, spending, and monthly savings with a calm, focused dashboard designed for everyday use.</p>
+          </article>
+
+          <div class="hero-metrics">
+            <article class="mini-stat hero-card">
+              <div class="mini-stat-label">Live balance</div>
+              <div class="mini-stat-value" data-summary="balance">£0.00</div>
+            </article>
+            <article class="mini-stat hero-card">
+              <div class="mini-stat-label">Quick insight</div>
+              <div class="section-copy">Your latest transactions and monthly trends update instantly from your secure cloud data.</div>
+            </article>
+          </div>
+        </div>
+
+        <div class="summary-grid">
+          <article class="summary-card">
+            <div class="summary-label">Total income</div>
+            <div class="summary-value" data-summary="income">£0.00</div>
+          </article>
+          <article class="summary-card">
+            <div class="summary-label">Total expenses</div>
+            <div class="summary-value" data-summary="expense">£0.00</div>
+          </article>
+          <article class="summary-card">
+            <div class="summary-label">Current balance</div>
+            <div class="summary-value" data-summary="balance">£0.00</div>
+          </article>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <h3>Real-time summary</h3>
+            <p class="section-copy">Income, expenses, and balance recalculate the moment a transaction changes.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Category tracking</h3>
+            <p class="section-copy">See where money goes with clear badges for food, bills, transport, shopping, and salary.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Monthly insight</h3>
+            <p class="section-copy">Spot your strongest savings month and biggest spending month in a glance.</p>
+          </article>
+        </div>
+
+        <article class="panel">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Recent activity</h2>
+              <p class="section-copy">Your 3 most recent transactions appear here.</p>
+            </div>
+          </div>
+          <div id="preview-list" class="preview-list"></div>
+        </article>
+      </section>
+
+      <section id="transactions" class="page">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Transactions</h2>
+            <p class="section-copy">Add new entries, filter your history, and remove anything you no longer need.</p>
+          </div>
+        </div>
+
+        <div class="transaction-layout">
+          <aside class="panel">
+            <form id="transaction-form" class="form-grid">
+              <label class="input-label" for="amount">
+                Amount
+                <input class="text-input" id="amount" name="amount" type="number" min="0.01" step="0.01" placeholder="0.00" required>
+              </label>
+
+              <label class="input-label" for="note">
+                Note
+                <input class="text-input" id="note" name="note" type="text" placeholder="Salary, groceries, train pass..." required>
+              </label>
+
+              <label class="input-label" for="category">
+                Category
+                <select class="select-input" id="category" name="category" required>
+                  <option value="food">Food</option>
+                  <option value="bills">Bills</option>
+                  <option value="transport">Transport</option>
+                  <option value="shopping">Shopping</option>
+                  <option value="salary">Salary</option>
+                </select>
+              </label>
+
+              <label class="input-label" for="currency">
+                Currency
+                <select class="select-input" id="currency" name="currency" required>
+                  <option value="GBP">GBP (£)</option>
+                  <option value="USD">USD ($)</option>
+                  <option value="EUR">EUR (€)</option>
+                  <option value="JPY">JPY (¥)</option>
+                </select>
+              </label>
+
+              <div class="input-label">
+                Type
+                <div class="type-toggle">
+                  <button class="toggle-btn" type="button" data-type="income">Income</button>
+                  <button class="toggle-btn" type="button" data-type="expense">Expense</button>
+                </div>
+              </div>
+
+              <div id="goal-allocation-box" class="allocation-box">
+                <div class="allocation-header">
+                  <span>Goal allocation</span>
+                  <span class="allocation-hint">For income only</span>
+                </div>
+
+                <label class="input-label" for="allocation-goal">
+                  Send part of this income to
+                  <select class="select-input" id="allocation-goal" name="allocation-goal">
+                    <option value="">No goal allocation</option>
+                  </select>
+                </label>
+
+                <div class="allocation-grid">
+                  <label class="input-label" for="allocation-type">
+                    Allocation type
+                    <select class="select-input" id="allocation-type" name="allocation-type">
+                      <option value="percentage">Percentage</option>
+                      <option value="amount">Fixed amount</option>
+                    </select>
+                  </label>
+
+                  <label class="input-label" for="allocation-value">
+                    Allocation value
+                    <input class="text-input" id="allocation-value" name="allocation-value" type="number" min="0" step="0.01" placeholder="0">
+                  </label>
+                </div>
+
+                <p id="allocation-help" class="allocation-help">Choose a goal and set either a percentage or exact amount from this income.</p>
+              </div>
+
+              <label class="input-label" for="date">
+                Date
+                <input class="text-input" id="date" name="date" type="date" required>
+              </label>
+
+              <p id="transaction-feedback" class="app-feedback"></p>
+              <button class="primary-btn" type="submit">Add transaction</button>
+            </form>
+          </aside>
+
+          <div class="panel">
+            <div class="filter-row">
+              <button class="filter-btn" type="button" data-filter="all">All</button>
+              <button class="filter-btn" type="button" data-filter="income">Income</button>
+              <button class="filter-btn" type="button" data-filter="expense">Expenses</button>
+              <button class="filter-btn" type="button" data-filter="food">Food</button>
+              <button class="filter-btn" type="button" data-filter="bills">Bills</button>
+              <button class="filter-btn" type="button" data-filter="transport">Transport</button>
+              <button class="filter-btn" type="button" data-filter="shopping">Shopping</button>
+            </div>
+
+            <div id="transactions-list" class="transactions-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="goals" class="page">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Goals</h2>
+            <p class="section-copy">Set personal saving targets, track progress, and stay focused on what you want to buy next.</p>
+          </div>
+        </div>
+
+        <div class="transaction-layout">
+          <aside class="panel">
+            <form id="goal-form" class="form-grid">
+              <label class="input-label" for="goal-title">
+                Goal name
+                <input class="text-input" id="goal-title" name="goal-title" type="text" placeholder="Buy a MacBook, holiday fund..." required>
+              </label>
+
+              <label class="input-label" for="goal-target">
+                Target price
+                <input class="text-input" id="goal-target" name="goal-target" type="number" min="0.01" step="0.01" placeholder="0.00" required>
+              </label>
+
+              <label class="input-label" for="goal-current">
+                Saved so far
+                <input class="text-input" id="goal-current" name="goal-current" type="number" min="0" step="0.01" placeholder="0.00" required>
+              </label>
+
+              <label class="input-label" for="goal-currency">
+                Currency
+                <select class="select-input" id="goal-currency" name="goal-currency" required>
+                  <option value="GBP">GBP (£)</option>
+                  <option value="USD">USD ($)</option>
+                  <option value="EUR">EUR (€)</option>
+                  <option value="JPY">JPY (¥)</option>
+                </select>
+              </label>
+
+              <label class="input-label" for="goal-deadline">
+                Deadline
+                <input class="text-input" id="goal-deadline" name="goal-deadline" type="date" required>
+              </label>
+
+              <label class="input-label" for="goal-note">
+                Note
+                <input class="text-input" id="goal-note" name="goal-note" type="text" placeholder="Optional extra detail">
+              </label>
+
+              <p id="goal-feedback" class="app-feedback"></p>
+              <button class="primary-btn" type="submit">Add goal</button>
+            </form>
+          </aside>
+
+          <div class="panel">
+            <div id="goals-list" class="goals-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="monthly" class="page">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Monthly overview</h2>
+            <p class="section-copy">Grouped automatically by month, with savings and expense trends shown side by side.</p>
+          </div>
+        </div>
+
+        <div class="monthly-overview">
+          <article id="best-month-card" class="month-card highlight-positive"></article>
+          <article id="highest-spend-card" class="month-card highlight-negative"></article>
+        </div>
+
+        <div class="charts-grid">
+          <article class="chart-card">
+            <h3>Expenses by month</h3>
+            <div id="expenses-chart"></div>
+          </article>
+          <article class="chart-card">
+            <h3>Savings by month</h3>
+            <div id="savings-chart"></div>
+          </article>
+        </div>
+
+        <article class="panel">
+          <h3 class="section-title">Monthly totals</h3>
+          <div id="monthly-list" class="month-list"></div>
+        </article>
+      </section>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

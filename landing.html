@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BudgetMate</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="landing-page">
+  <div class="money-orbs" aria-hidden="true">
+    <span class="money-orb orb-1">£</span>
+    <span class="money-orb orb-2">€</span>
+    <span class="money-orb orb-3">€</span>
+    <span class="money-orb orb-4">¥</span>
+    <span class="money-orb orb-5">¥</span>
+    <span class="money-orb orb-6">£</span>
+  </div>
+  <main class="landing-shell">
+    <section class="landing-hero">
+      <div class="landing-copy">
+        <span class="eyebrow">BudgetMate</span>
+        <h1 class="landing-title">A calmer way to track spending, income, and monthly progress.</h1>
+        <p class="landing-text">BudgetMate helps you understand where your money goes, what you save, and how each month is shaping up without clutter or complicated tools.</p>
+
+        <div class="landing-actions">
+          <a class="primary-btn landing-btn" href="auth.html#signup">Create account</a>
+          <a class="landing-secondary" href="auth.html#login">Log in</a>
+        </div>
+
+        <div class="landing-points">
+          <article class="landing-point">
+            <div class="landing-point-icon" aria-hidden="true">🧾</div>
+            <h3>Track every transaction</h3>
+            <p class="section-copy">Add income and expenses in seconds with category labels and real-time updates.</p>
+          </article>
+          <article class="landing-point">
+            <div class="landing-point-icon" aria-hidden="true">📈</div>
+            <h3>See trends clearly</h3>
+            <p class="section-copy">Review weekly, monthly, and all-time performance from one clean dashboard.</p>
+          </article>
+          <article class="landing-point">
+            <div class="landing-point-icon" aria-hidden="true">🔒</div>
+            <h3>Keep data personal</h3>
+            <p class="section-copy">Your BudgetMate data is tied to your own secure account and synced through Supabase.</p>
+          </article>
+        </div>
+      </div>
+
+      <aside class="landing-preview">
+        <article class="preview-card preview-primary">
+          <div class="mini-stat-label">Monthly snapshot</div>
+          <div class="landing-metric-row">
+            <div>
+              <div class="summary-label">Income</div>
+              <div class="preview-metric income-text">£3,250</div>
+            </div>
+            <div>
+              <div class="summary-label">Expenses</div>
+              <div class="preview-metric expense-text">£1,890</div>
+            </div>
+          </div>
+          <div class="summary-label">Balance</div>
+          <div class="preview-balance">£1,360</div>
+        </article>
+
+        <article class="preview-card">
+          <div class="mini-stat-label">Recent activity</div>
+          <div class="landing-activity">
+            <div class="landing-activity-row">
+              <span class="badge salary">salary</span>
+              <span class="amount income">+£2,800</span>
+            </div>
+            <div class="landing-activity-row">
+              <span class="badge bills">bills</span>
+              <span class="amount expense">-£950</span>
+            </div>
+            <div class="landing-activity-row">
+              <span class="badge food">food</span>
+              <span class="amount expense">-£74</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="preview-card">
+          <div class="mini-stat-label">What you get</div>
+          <ul class="landing-list">
+            <li>Secure login and personal data</li>
+            <li>Live summaries and filters</li>
+            <li>Monthly insights and charts</li>
+            <li>Quick income and expense tracking</li>
+            <li>Category-based organisation</li>
+            <li>Clean, focused dashboard views</li>
+          </ul>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
