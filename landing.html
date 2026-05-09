@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BudgetMate</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="landing-page">
+  <div class="money-orbs" aria-hidden="true">
+    <span class="money-orb orb-1">£</span>
+    <span class="money-orb orb-2">€</span>
+    <span class="money-orb orb-3">€</span>
+    <span class="money-orb orb-4">¥</span>
+    <span class="money-orb orb-5">¥</span>
+    <span class="money-orb orb-6">£</span>
+  </div>
+
+  <main class="landing-shell">
+    <nav class="topbar landing-nav">
+      <div class="brand">
+        <h1 class="brand-title">BudgetMate</h1>
+        <p class="brand-subtitle">Budget and expense tracking, kept simple.</p>
+      </div>
+      <div class="nav-links">
+        <a class="nav-link active" href="#landing-hero">Home</a>
+        <a class="nav-link" href="#landing-how">How it works</a>
+        <a class="nav-link" href="#landing-features">Features</a>
+        <a class="nav-link" href="#landing-testimonials">Reviews</a>
+        <a class="nav-link" href="auth.html#signup">Sign up</a>
+        <a class="logout-btn" href="auth.html#login">Log in</a>
+      </div>
+    </nav>
+
+    <section id="landing-hero" class="landing-hero">
+      <div class="landing-hero-copy">
+        <span class="landing-pill-tag">Personal Finance Made Simple</span>
+        <h1 class="landing-title">
+          <span id="landing-rotating-headline" class="landing-rotating-text">Track every pound with clarity.</span>
+        </h1>
+        <p class="landing-text">BudgetMate brings your income, spending, goals, and monthly habits into one calm dashboard so you can make better money decisions without stress.</p>
+
+        <div class="landing-actions">
+          <a class="primary-btn landing-btn" href="auth.html#signup">Create free account</a>
+          <a class="landing-secondary" href="#landing-features" id="landing-scroll-features">See how it works</a>
+        </div>
+
+        <div class="landing-trust-strip" aria-label="Trust points">
+          <span>⭐ Trusted by users worldwide</span>
+          <span class="landing-trust-dot" aria-hidden="true"></span>
+          <span>🔒 100% private and secure</span>
+          <span class="landing-trust-dot" aria-hidden="true"></span>
+          <span>🟢 Free to get started</span>
+        </div>
+      </div>
+
+      <div class="landing-hero-visual">
+        <div class="landing-hero-glow" aria-hidden="true"></div>
+        <div class="landing-browser-mockup">
+          <div class="landing-browser-bar">
+            <div class="landing-browser-dots" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="landing-browser-url">budgetmate.app/dashboard</div>
+          </div>
+
+          <div class="landing-browser-body">
+            <div class="landing-browser-top">
+              <article class="landing-browser-stat">
+                <span class="landing-browser-stat-label">Income</span>
+                <strong class="income-text">£4,820</strong>
+              </article>
+              <article class="landing-browser-stat">
+                <span class="landing-browser-stat-label">Expenses</span>
+                <strong class="expense-text">£2,145</strong>
+              </article>
+              <article class="landing-browser-stat">
+                <span class="landing-browser-stat-label">Balance</span>
+                <strong class="income-text">£2,675</strong>
+              </article>
+            </div>
+
+            <div class="landing-browser-transactions">
+              <div class="landing-browser-row">
+                <div class="landing-browser-row-left">
+                  <span class="badge salary">Salary</span>
+                  <div>
+                    <div class="landing-browser-note">Monthly pay</div>
+                    <div class="landing-browser-date">01 May 2026</div>
+                  </div>
+                </div>
+                <span class="amount income">+£3,200</span>
+              </div>
+              <div class="landing-browser-row">
+                <div class="landing-browser-row-left">
+                  <span class="badge bills">Bills</span>
+                  <div>
+                    <div class="landing-browser-note">Rent + utilities</div>
+                    <div class="landing-browser-date">03 May 2026</div>
+                  </div>
+                </div>
+                <span class="amount expense">-£1,180</span>
+              </div>
+              <div class="landing-browser-row">
+                <div class="landing-browser-row-left">
+                  <span class="badge food">Food</span>
+                  <div>
+                    <div class="landing-browser-note">Groceries</div>
+                    <div class="landing-browser-date">05 May 2026</div>
+                  </div>
+                </div>
+                <span class="amount expense">-£74</span>
+              </div>
+              <div class="landing-browser-row">
+                <div class="landing-browser-row-left">
+                  <span class="badge transport">Transport</span>
+                  <div>
+                    <div class="landing-browser-note">Train pass</div>
+                    <div class="landing-browser-date">07 May 2026</div>
+                  </div>
+                </div>
+                <span class="amount expense">-£62</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="landing-stats-section landing-reveal">
+      <div class="landing-stats-grid">
+        <article class="landing-stat-card">
+          <strong class="landing-stat-value" data-count="6000" data-prefix="£">£0</strong>
+          <span class="landing-stat-label">average saved in first year</span>
+        </article>
+        <article class="landing-stat-card">
+          <strong class="landing-stat-value" data-count="92" data-suffix="%">0%</strong>
+          <span class="landing-stat-label">feel less financial stress</span>
+        </article>
+        <article class="landing-stat-card">
+          <strong class="landing-stat-value" data-count="100" data-suffix="%">0%</strong>
+          <span class="landing-stat-label">private and secure</span>
+        </article>
+        <article class="landing-stat-card">
+          <strong class="landing-stat-value" data-count="3" data-suffix=" mins">0 mins</strong>
+          <span class="landing-stat-label">to get started</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="landing-how" class="landing-section landing-how landing-reveal">
+      <div class="landing-section-head">
+        <span class="landing-section-kicker">Simple steps</span>
+        <h2 class="landing-section-title">Here is how BudgetMate works</h2>
+        <p class="landing-section-copy">From your first signup to clearer monthly decisions, everything is built to feel lightweight, fast, and reassuring.</p>
+      </div>
+
+      <div class="landing-steps-grid">
+        <article class="landing-step-card landing-reveal landing-delay-0">
+          <div class="landing-step-number">1</div>
+          <div class="landing-step-icon" aria-hidden="true">✨</div>
+          <h3>Create your account</h3>
+          <p>Sign up free in under a minute. No credit card needed.</p>
+        </article>
+        <article class="landing-step-card landing-reveal landing-delay-1">
+          <div class="landing-step-number">2</div>
+          <div class="landing-step-icon" aria-hidden="true">🧾</div>
+          <h3>Add your transactions</h3>
+          <p>Log income and expenses by category in seconds.</p>
+        </article>
+        <article class="landing-step-card landing-reveal landing-delay-2">
+          <div class="landing-step-number">3</div>
+          <div class="landing-step-icon" aria-hidden="true">📈</div>
+          <h3>Watch your money grow</h3>
+          <p>See your balance, trends and insights update instantly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="landing-features" class="landing-section landing-features">
+      <div class="landing-feature-row landing-reveal-left">
+        <div class="landing-feature-visual">
+          <div class="landing-feature-card landing-feature-summary">
+            <article>
+              <span>Income</span>
+              <strong class="income-text">£5,120</strong>
+            </article>
+            <article>
+              <span>Expenses</span>
+              <strong class="expense-text">£2,420</strong>
+            </article>
+            <article>
+              <span>Balance</span>
+              <strong class="income-text">£2,700</strong>
+            </article>
+          </div>
+        </div>
+        <div class="landing-feature-copy">
+          <span class="landing-feature-kicker">Real time tracking</span>
+          <h2>Always know your balance</h2>
+          <p>From payday to weekend spending, BudgetMate keeps your totals live so you always know what is safe to spend.</p>
+          <ul class="landing-check-list">
+            <li>Live income, expense, and balance updates</li>
+            <li>Simple weekly, monthly, and all-time views</li>
+            <li>Quick add tools for fast logging</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="landing-feature-row landing-feature-row-reverse landing-reveal-right">
+        <div class="landing-feature-copy">
+          <span class="landing-feature-kicker">Smart categories</span>
+          <h2>See where your money really goes</h2>
+          <p>Clear category tracking turns messy spending into patterns you can actually act on before the month gets away from you.</p>
+          <ul class="landing-check-list">
+            <li>Instant category badges for every transaction</li>
+            <li>Visual highlights for biggest spend areas</li>
+            <li>Better decisions without spreadsheet overload</li>
+          </ul>
+        </div>
+        <div class="landing-feature-visual">
+          <div class="landing-feature-card landing-feature-pie">
+            <div class="landing-pie"></div>
+            <div class="landing-pie-legend">
+              <div><span class="landing-pie-dot salary"></span>Salary 48%</div>
+              <div><span class="landing-pie-dot bills"></span>Bills 24%</div>
+              <div><span class="landing-pie-dot food"></span>Food 16%</div>
+              <div><span class="landing-pie-dot transport"></span>Transport 12%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="landing-feature-row landing-reveal-left">
+        <div class="landing-feature-visual">
+          <div class="landing-feature-card landing-feature-bars">
+            <div class="landing-bars">
+              <div class="landing-bar-col">
+                <span class="landing-bar landing-bar-expense" style="height: 62%"></span>
+                <span class="landing-bar landing-bar-savings" style="height: 44%"></span>
+                <small>Jan</small>
+              </div>
+              <div class="landing-bar-col">
+                <span class="landing-bar landing-bar-expense" style="height: 48%"></span>
+                <span class="landing-bar landing-bar-savings" style="height: 60%"></span>
+                <small>Feb</small>
+              </div>
+              <div class="landing-bar-col">
+                <span class="landing-bar landing-bar-expense" style="height: 72%"></span>
+                <span class="landing-bar landing-bar-savings" style="height: 36%"></span>
+                <small>Mar</small>
+              </div>
+              <div class="landing-bar-col">
+                <span class="landing-bar landing-bar-expense" style="height: 52%"></span>
+                <span class="landing-bar landing-bar-savings" style="height: 68%"></span>
+                <small>Apr</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="landing-feature-copy">
+          <span class="landing-feature-kicker">Monthly insights</span>
+          <h2>Spot trends before they become problems</h2>
+          <p>Monthly visuals make it easier to catch lifestyle drift, protect savings, and plan your next move with confidence.</p>
+          <ul class="landing-check-list">
+            <li>Visual spending and savings trends</li>
+            <li>See strong and weak months instantly</li>
+            <li>Stay ahead of patterns before they hurt</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="landing-testimonials" class="landing-section landing-testimonials">
+      <div class="landing-section-head landing-reveal">
+        <span class="landing-section-kicker">Real feedback</span>
+        <h2 class="landing-section-title">What our users are saying</h2>
+      </div>
+
+      <div class="landing-testimonial-grid">
+        <article class="landing-testimonial-card landing-reveal landing-delay-0">
+          <div class="landing-quote-mark">“</div>
+          <p class="landing-testimonial-quote">BudgetMate made me realise how much I was casually losing on food deliveries each month. It changed my habits fast.</p>
+          <div class="landing-stars" aria-label="Five stars">★★★★★</div>
+          <strong>Aisha K.</strong>
+          <span>Freelancer, London</span>
+        </article>
+        <article class="landing-testimonial-card landing-reveal landing-delay-1">
+          <div class="landing-quote-mark">“</div>
+          <p class="landing-testimonial-quote">The monthly view is the first budgeting tool that actually helped me feel calm instead of guilty about money.</p>
+          <div class="landing-stars" aria-label="Five stars">★★★★★</div>
+          <strong>Marcus T.</strong>
+          <span>Junior designer, Manchester</span>
+        </article>
+        <article class="landing-testimonial-card landing-reveal landing-delay-2">
+          <div class="landing-quote-mark">“</div>
+          <p class="landing-testimonial-quote">I signed up in minutes, tracked my spending the same day, and finally felt like I understood where my salary was going.</p>
+          <div class="landing-stars" aria-label="Five stars">★★★★★</div>
+          <strong>Priya S.</strong>
+          <span>Medical student, Birmingham</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="landing-cta landing-reveal">
+      <div class="landing-cta-inner">
+        <h2>Ready to take control of your money?</h2>
+        <p>Join BudgetMate and build a calmer, clearer relationship with your spending, savings, and future goals.</p>
+        <a class="primary-btn landing-btn landing-cta-btn" href="auth.html#signup">Create your free account</a>
+        <span class="landing-cta-note">Free forever. No credit card needed. Cancel anytime.</span>
+      </div>
+    </section>
+
+    <footer class="landing-footer">
+      <div class="landing-footer-grid">
+        <div>
+          <div class="landing-footer-brand">BudgetMate</div>
+          <p class="landing-footer-copy">Personal finance that feels lighter, clearer, and easier to trust.</p>
+        </div>
+        <div>
+          <div class="landing-footer-heading">Navigate</div>
+          <div class="landing-footer-links">
+            <a href="#landing-hero">Home</a>
+            <a href="#landing-features">Transactions</a>
+            <a href="#landing-how">Goals</a>
+            <a href="#landing-features">Monthly</a>
+          </div>
+        </div>
+        <div>
+          <div class="landing-footer-heading">Built with</div>
+          <p class="landing-footer-copy">Supabase, thoughtful design, and a calm approach to modern money habits.</p>
+        </div>
+      </div>
+      <div class="landing-footer-bottom">© 2026 BudgetMate. All rights reserved.</div>
+    </footer>
+  </main>
+
+  <script type="module" src="app.js"></script>
+  <script>
+    (() => {
+      const body = document.body;
+      if (!body.classList.contains('landing-page')) return;
+
+      const headlines = [
+        'Track every pound with clarity.',
+        'Know exactly where your money goes.',
+        'Never worry about money again.'
+      ];
+
+      const headlineEl = document.getElementById('landing-rotating-headline');
+      let headlineIndex = 0;
+
+      if (headlineEl) {
+        setInterval(() => {
+          headlineEl.classList.add('landing-rotating-out');
+          setTimeout(() => {
+            headlineIndex = (headlineIndex + 1) % headlines.length;
+            headlineEl.textContent = headlines[headlineIndex];
+            headlineEl.classList.remove('landing-rotating-out');
+          }, 260);
+        }, 3000);
+      }
+
+      const smoothLinks = document.querySelectorAll('a[href^="#landing-"]');
+      smoothLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          const targetId = link.getAttribute('href');
+          const target = targetId ? document.querySelector(targetId) : null;
+          if (!target) return;
+          event.preventDefault();
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        });
+      });
+
+      const revealItems = document.querySelectorAll('.landing-reveal, .landing-reveal-left, .landing-reveal-right');
+      const statsSection = document.querySelector('.landing-stats-section');
+      const statValues = document.querySelectorAll('.landing-stat-value');
+      let statsAnimated = false;
+
+      const runCountUp = () => {
+        if (statsAnimated) return;
+        statsAnimated = true;
+
+        statValues.forEach((item) => {
+          const target = Number(item.dataset.count || 0);
+          const prefix = item.dataset.prefix || '';
+          const suffix = item.dataset.suffix || '';
+          const duration = 1400;
+          const startTime = performance.now();
+
+          const renderValue = (value) => {
+            if (target >= 1000) {
+              return `${prefix}${Math.round(value).toLocaleString()}${suffix}`;
+            }
+            return `${prefix}${Math.round(value)}${suffix}`;
+          };
+
+          const tick = (now) => {
+            const progress = Math.min((now - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            item.textContent = renderValue(target * eased);
+            if (progress < 1) {
+              requestAnimationFrame(tick);
+            }
+          };
+
+          item.textContent = renderValue(0);
+          requestAnimationFrame(tick);
+        });
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('revealed');
+          if (statsSection && entry.target === statsSection) {
+            runCountUp();
+          }
+          observer.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.18,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealItems.forEach((item) => observer.observe(item));
+      if (statsSection) observer.observe(statsSection);
+    })();
+  </script>
+</body>
+</html>
